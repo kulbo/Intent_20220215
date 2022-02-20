@@ -1,11 +1,22 @@
 package kr.co.smartsoft.intent_20220215
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_other.*
 
 class OtherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other)
+
+        btnReturnToMain.setOnClickListener {
+//            돌나다믐 경우에는 Intent 활용 x
+//            val myIntent = Intent(this, MainActivity::class.java)
+//            startActivity(myIntent)
+
+            finish()
+        }
     }
 }
